@@ -3,6 +3,7 @@ package com.abdul.bajajdb
 import android.database.Cursor
 import android.net.Uri
 import android.os.Bundle
+import android.provider.CallLog
 import android.widget.CursorAdapter
 import android.widget.ListView
 import android.widget.SimpleCursorAdapter
@@ -14,7 +15,8 @@ class ContentProviderActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_content_provider)
         listview = findViewById(R.id.cp_listview)
-        val allMessages: Uri = Uri.parse("content://sms/inbox")
+        val allMessages: Uri = CallLog.Calls.CONTENT_URI
+            //Uri.parse("content://sms/inbox")
 
         val cursor: Cursor? = this.contentResolver.query(
             allMessages,
@@ -23,7 +25,8 @@ class ContentProviderActivity : AppCompatActivity() {
             null, null
         )
 
-        var fromColNames = Array<String>(1){"body"}
+        var fromColNames = Array<String>(1){CallLog.Calls.NUMBER}
+            //"body"}
         var toTextviewIds = IntArray(1){android.R.id.text1}
 
         var cursorAdapter = SimpleCursorAdapter(this,
