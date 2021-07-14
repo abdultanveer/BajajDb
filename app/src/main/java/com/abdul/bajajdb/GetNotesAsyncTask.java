@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.abdul.bajajdb.db.todo.Student;
 import com.abdul.bajajdb.db.todo.TodoDao;
 import com.abdul.bajajdb.db.todo.TodoNote;
 
@@ -29,6 +30,7 @@ public class GetNotesAsyncTask extends AsyncTask<Void,Void, List<TodoNote>> {
 
     @Override
     protected void onPostExecute(List<TodoNote> todoNotes) {
+        Student abdul = new Student();
         super.onPostExecute(todoNotes);
         String[] from = {"title","description"};
         int[] to = {android.R.id.text1,android.R.id.text2};
