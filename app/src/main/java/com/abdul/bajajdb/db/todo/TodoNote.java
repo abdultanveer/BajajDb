@@ -15,4 +15,13 @@ public class TodoNote {
         this.title = title;
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        return "TodoNote{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }

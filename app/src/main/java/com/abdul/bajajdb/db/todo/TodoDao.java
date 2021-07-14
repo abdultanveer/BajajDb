@@ -6,6 +6,8 @@ import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
+import java.util.List;
+
 /**
  * db accesss object -- CRUD
  */
@@ -16,7 +18,7 @@ public interface TodoDao {
 
 
     @Query("select * from TodoNote")
-    public Cursor getAllNotes();
+    public List<TodoNote> getAllNotes();
 
     /*public void readNote();
     public void updateNote();
