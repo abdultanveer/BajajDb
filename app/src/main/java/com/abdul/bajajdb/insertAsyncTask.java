@@ -2,8 +2,8 @@ package com.abdul.bajajdb;
 
 import android.os.AsyncTask;
 
-import com.abdul.bajajdb.db.Word;
-import com.abdul.bajajdb.db.WordDao;
+import com.abdul.bajajdb.db.word.Word;
+import com.abdul.bajajdb.db.word.WordDao;
 
 public  class insertAsyncTask extends AsyncTask<Word, Void, Void> {
 

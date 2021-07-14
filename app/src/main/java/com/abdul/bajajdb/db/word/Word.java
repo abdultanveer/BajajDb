@@ -1,4 +1,4 @@
-package com.abdul.bajajdb.db;
+package com.abdul.bajajdb.db.word;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;

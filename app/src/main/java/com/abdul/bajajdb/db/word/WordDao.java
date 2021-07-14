@@ -1,4 +1,4 @@
-package com.abdul.bajajdb.db;
+package com.abdul.bajajdb.db.word;
 
 import androidx.room.Dao;
 import androidx.room.Insert;

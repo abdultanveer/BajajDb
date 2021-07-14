@@ -5,9 +5,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
-import com.abdul.bajajdb.db.Word
-import com.abdul.bajajdb.db.WordDao
-import com.abdul.bajajdb.db.WordRoomDatabase
+import com.abdul.bajajdb.db.word.Word
+import com.abdul.bajajdb.db.word.WordDao
+import com.abdul.bajajdb.db.word.WordRoomDatabase
 
 class MainActivity : AppCompatActivity() {
     lateinit var database: WordRoomDatabase
