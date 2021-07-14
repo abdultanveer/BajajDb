@@ -30,8 +30,11 @@ public class GetNotesAsyncTask extends AsyncTask<Void,Void, List<TodoNote>> {
     @Override
     protected void onPostExecute(List<TodoNote> todoNotes) {
         super.onPostExecute(todoNotes);
+        String[] from = {"title","description"};
+        int[] to = {android.R.id.text1,android.R.id.text2};
         ArrayAdapter<TodoNote> adapter = new ArrayAdapter<TodoNote>(mContext,
-                android.R.layout.simple_list_item_1,android.R.id.text1,todoNotes);
+                android.R.layout.simple_list_item_2,
+                android.R.id.text1,todoNotes);
         mListView.setAdapter(adapter);
     }
 }
